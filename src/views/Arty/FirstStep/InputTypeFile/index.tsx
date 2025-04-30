@@ -150,7 +150,7 @@ export const InputTypeFile = () => {
             {imgFileLoading ? (
               <Loader />
             ) : file ? (
-              <CheckIcon sx={{ color: Colors.successGreen, height: '50px', width: '50px' }} />
+              <CheckIcon sx={{ color: '#43a047', height: '50px', width: '50px' }} />
             ) : (
               <FileUploadIcon sx={{ height: '50px', width: '50px' }} />
             )}
