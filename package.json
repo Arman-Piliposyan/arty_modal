@@ -2,7 +2,7 @@
   "name": "simulacrum",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode production --env env=production",
+    "build": "webpack --mode production --env env=production --output public",
     "build:dev": "webpack --mode development --env env=development",
     "build:start": "cd dist && PORT=3001 npx serve",
     "start": "webpack serve --open --mode development --env env=development",
