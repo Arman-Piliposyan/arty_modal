@@ -260,7 +260,7 @@ export const InputTypeFile = () => {
           sx={{ width: '100%', mb: '24px' }}
           onChange={handleChangeArtistName}
           disabled={imgFileLoading}
-          label="Artist Name"
+          label="Artist name"
           autoComplete="off"
           value={artistName}
           size="small"
