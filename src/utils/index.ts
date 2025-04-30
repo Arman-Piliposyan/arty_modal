@@ -1,5 +1,3 @@
-import { MarkerType, Edge, Node } from 'reactflow';
-
 import { Colors } from '/src/globalStyles/colors';
 
 type NameInfoType =
@@ -9,32 +7,6 @@ type NameInfoType =
       phaseName: string;
     }
   | undefined;
-
-export const generateFlowHistoryEdges = (edgesArray: Edge[], nodesArray: Node[]) => {
-  const newEdgesArray = edgesArray.map((edge) => {
-    if (edge.style?.stroke !== '#00B1E5') {
-      const sourceNode = nodesArray.find((node) => node.id === edge.source);
-      const targetNode = nodesArray.find((node) => node.id === edge.target);
-      if (sourceNode && targetNode && sourceNode.data.isPast && targetNode.data.isPast) {
-        return {
-          ...edge,
-          markerEnd: {
-            type: MarkerType.ArrowClosed,
-            color: '#00B1E5',
-            height: 7,
-            width: 7,
-          },
-          style: { stroke: '#00B1E5', strokeWidth: 3 },
-          animated: true,
-        };
-      }
-      return edge;
-    }
-    return edge;
-  });
-
-  return newEdgesArray;
-};
 
 export const stringCapitalize = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
